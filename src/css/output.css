@@ -485,12 +485,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 2.5rem;
 }
 
+.block {
+  display: block;
+}
+
 .inline-block {
   display: inline-block;
 }
 
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-screen {
@@ -533,6 +541,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -540,6 +560,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-blue {
   --tw-bg-opacity: 1;
   background-color: rgb(46 92 245 / var(--tw-bg-opacity));
+}
+
+.p-20 {
+  padding: 5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-10 {
@@ -575,6 +607,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-normal {
   font-weight: 400;
 }
@@ -591,9 +643,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2rem;
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+.leading-normal {
+  line-height: 1.5;
+}
+
+.leading-snug {
+  line-height: 1.375;
+}
+
+.leading-4 {
+  line-height: 1rem;
+}
+
+.leading-loose {
+  line-height: 2;
 }
 
 .text-blue {
@@ -601,7 +668,55 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(46 92 245 / var(--tw-text-opacity));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.hover\:font-bold:hover {
+  font-weight: 700;
+}
+
 .hover\:text-blue:hover {
   --tw-text-opacity: 1;
   color: rgb(46 92 245 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:space-x-16 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(4rem * var(--tw-space-x-reverse));
+    margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .sm\:p-0 {
+    padding: 0px;
+  }
+
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .sm\:leading-8 {
+    line-height: 2rem;
+  }
 }
